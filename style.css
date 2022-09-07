@@ -1,0 +1,52 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+p {
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1%;
+  margin-left: 10px;
+}
+ul {
+  list-style: none;
+}
+.weather-app {
+  background-color: #96f464;
+  border: 1px solid #dadde1;
+  border-radius: 1%;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+.temperature {
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1%;
+  margin-left: 10px;
+}
+
+.units {
+  position: relative;
+  top: -15px;
+}
+
+.weather-search-batton {
+  margin-top: 10px;
+  color: #6c8a91;
+  background-color: white;
+  border: 1px solid #dadde1;
+  border-radius: 10%;
+}
+
+.btn {
+  display: block;
+  margin: 0;
+  margin-top: 11px;
+  padding: 4px 5px;
+}
+.card {
+  background-color: #e8f0fe;
+}
+.tip {
+  background-color: #e8f0fe;
+}
