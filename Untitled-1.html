@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather in a git</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <form id="search-form">
+          <input
+            type="search"
+            placeholder="Type your city"
+            class="form-control shadow-sm"
+            id="search-text-input"
+          />
+          <input type="submit" value="Search" class="weather-search-batton" />
+        </form>
+        <button type="button" class="btn btn-dark">Current Location</button>
+        <h1 id="city"></h1>
+        <h2>Friday 14:34</h2>
+        <hr />
+        <div class="row">
+          <div class="col-6">
+            <p><span class="temperature" id="temperature"></span>℃</p>
+            <br />
+          </div>
+          <div class="col-6">
+            <ul>
+              <li><span id="weathre"></span></li>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind speed: <span id="wind"> </span> km/h</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div class="card">
+          <div class="row">
+            <div class="col-2">
+              Sat <br />
+              🌞 <br />
+              24º|16º
+            </div>
+            <div class="col-2">
+              Sun <br />
+              🌞<br />
+              25º|17º
+            </div>
+            <div class="col-2">
+              Mon <br />
+              🌞<br />
+              27º|18º
+            </div>
+            <div class="col-2">
+              Tue <br />
+              🌞<br />
+              22º|18º
+            </div>
+            <div class="col-2">
+              Wed <br />
+              🌞<br />
+              22º|17º
+            </div>
+            <div class="col-2">
+              Thu <br />
+              🌞 <br />
+              24º|17º
+            </div>
+          </div>
+        </div>
+        <br />
+        <form>
+          <label for="tip"> Tip for a day </label>
+          <input type="text" id="tip" class="tip" />
+        </form>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
