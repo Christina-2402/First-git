@@ -1,6 +1,13 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+
+h3 {
+  font-size: 13px;
+  opacity: 0.7;
+  text-align: center;
+  font-family: monospace;
+}
 p {
   font-size: 34px;
   font-weight: 400;
@@ -49,4 +56,10 @@ ul {
 }
 .tip {
   background-color: #e8f0fe;
+}
+
+.creator {
+  display: inline;
+  text-align: center;
+  text-decoration: none;
 }
