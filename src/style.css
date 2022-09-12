@@ -1,6 +1,13 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+h1 {
+  color: #1c1f23;
+  font-size: 40px;
+  font-weight: 100;
+  line-height: 28px;
+  margin-top: 11px;
+}
 
 h3 {
   font-size: 13px;
@@ -20,7 +27,7 @@ ul {
 .weather-app {
   background-color: #96f464;
   border: 1px solid #dadde1;
-  border-radius: 1%;
+  border-radius: 5px;
   padding: 20px;
   margin: 20px auto;
   max-width: 600px;
