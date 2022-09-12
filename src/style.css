@@ -21,8 +21,12 @@ p {
   line-height: 1%;
   margin-left: 10px;
 }
-ul {
+li {
   list-style: none;
+  color: #1c1f23;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 21px;
 }
 .weather-app {
   background-color: #96f464;
