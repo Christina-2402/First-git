@@ -15,12 +15,7 @@ h3 {
   text-align: center;
   font-family: monospace;
 }
-p {
-  font-size: 34px;
-  font-weight: 400;
-  line-height: 1%;
-  margin-left: 10px;
-}
+
 li {
   list-style: none;
   color: #1c1f23;
@@ -46,6 +41,8 @@ li {
 .units {
   position: relative;
   top: -15px;
+  font-size: 16px;
+  font-weight: 800;
 }
 
 .weather-search-batton {
