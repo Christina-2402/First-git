@@ -24,7 +24,6 @@ let days = [
 h2.innerHTML = `${days[dayIndex]} ${hours}:${minutes}`;
 
 function showWeatherCondition(response) {
-  console.log(response.data.weather[0].icon);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
