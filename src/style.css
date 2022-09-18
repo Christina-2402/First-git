@@ -22,7 +22,6 @@ li {
   font-size: 19px;
   font-weight: bold;
   line-height: 21px;
-  text-transform: capitalize;
 }
 .weather-app {
   background-color: #ffffff;
@@ -71,4 +70,8 @@ li {
   display: inline;
   text-align: center;
   text-decoration: none;
+}
+
+.weather-temprature. active {
+  color: #1c1f23;
 }

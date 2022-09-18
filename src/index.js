@@ -38,6 +38,7 @@ function showWeatherCondition(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  celsiusTemperature = response.data.main.temp;
 }
 
 function search(city) {
@@ -56,7 +57,26 @@ function handelSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handelSubmit);
 
-search("Bucha");
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 function showPosition(position) {
   let apiKey = "1ac15f3089d5ecb2f63776d46484ddca";
@@ -72,3 +92,5 @@ function getCurrentPosition(event) {
 
 let locationButton = document.querySelector("button");
 locationButton.addEventListener("click", getCurrentPosition);
+
+search("Bucha");
