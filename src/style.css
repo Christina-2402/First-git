@@ -23,6 +23,9 @@ li {
   font-weight: bold;
   line-height: 21px;
 }
+a {
+  text-decoration: none;
+}
 .weather-app {
   background-color: #ffffff;
   border: 1px solid #dadde1;
@@ -72,6 +75,11 @@ li {
   text-decoration: none;
 }
 
-.weather-temprature. active {
+.active {
+  color: #1c1f23;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
   color: #1c1f23;
 }
