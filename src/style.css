@@ -62,8 +62,12 @@ a {
   margin-top: 11px;
   padding: 4px 5px;
 }
-.card {
+.weather-forecast {
   background-color: #e8f0fe;
+  text-align: center;
+}
+.weather-forecast-min {
+  opacity: 0.6;
 }
 .tip {
   background-color: #e8f0fe;
