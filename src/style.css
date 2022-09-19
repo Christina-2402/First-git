@@ -65,6 +65,7 @@ a {
 .weather-forecast {
   background-color: #e8f0fe;
   text-align: center;
+  margin-bottom: 15px;
 }
 .weather-forecast-min {
   opacity: 0.6;

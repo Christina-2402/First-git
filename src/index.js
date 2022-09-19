@@ -23,6 +23,25 @@ let days = [
 
 h2.innerHTML = `${days[dayIndex]} ${hours}:${minutes}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = `
+   <div class="row">
+            <div class="col-2">
+              <div class="weather-forecast-date">Sat</div>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+                alt=""
+                width="46"
+              />
+              <div class="weather-forcast-temperatures">
+                <span class="weater-forecast-max">24º|</span>
+                <span class="weather-forecast-min">16º</span>
+              </div>
+            </div>
+          </div>`;
+}
+
 function showWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -98,3 +117,4 @@ let locationButton = document.querySelector("button");
 locationButton.addEventListener("click", getCurrentPosition);
 
 search("Bucha");
+displayForecast();
