@@ -25,10 +25,15 @@ h2.innerHTML = `${days[dayIndex]} ${hours}:${minutes}`;
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = `
-   <div class="row">
+
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "San"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
             <div class="col-2">
-              <div class="weather-forecast-date">Sat</div>
+              <div class="weather-forecast-date">${day}</div>
               <img
                 src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
                 alt=""
@@ -38,8 +43,11 @@ function displayForecast() {
                 <span class="weater-forecast-max">24º|</span>
                 <span class="weather-forecast-min">16º</span>
               </div>
-            </div>
-          </div>`;
+            </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function showWeatherCondition(response) {
