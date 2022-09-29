@@ -23,6 +23,13 @@ let days = [
 
 h2.innerHTML = `${days[dayIndex]} ${hours}:${minutes}`;
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
 function displayForecast(response) {
   console.log(response.data.daily);
   let forecast = response.data.daily;
@@ -34,15 +41,23 @@ function displayForecast(response) {
       forecastHTML +
       `
             <div class="col-2">
-              <div class="weather-forecast-date">${forecastDay.dt}</div>
+              <div class="weather-forecast-date">${formatDay(
+                forecastDay.dt
+              )}</div>
               <img
-                src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+                src="https://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].icon
+                }@2x.png"
                 alt=""
                 width="46"
               />
               <div class="weather-forcast-temperatures">
-                <span class="weater-forecast-max">${forecastDay.temp.max}º|</span>
-                <span class="weather-forecast-min">${forecastDay.temp.min}º</span>
+                <span class="weater-forecast-max">${
+                  forecastDay.temp.max
+                }º|</span>
+                <span class="weather-forecast-min">${
+                  forecastDay.temp.min
+                }º</span>
               </div>
             </div>`;
   });
